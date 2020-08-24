@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState}from 'react';
 import './App.css';
+import Navbar from "./Navbar";
+import Home from "./Home";
+import Skillset from "./Skillset";
+import Resume from "./Resume";
+import Contact from "./Contact"
+import Footer from "./Footer"
+import Slider from "./Slider"
+
+
+
+
 
 function App() {
+
+  const [title, setTitle] = useState(["portfolio", "skillset", "resumé", "contact"])
+
+  const [icons, setIcons] = useState(["public/github.png"])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Home icons={icons}/>
+      <Slider title={title[0]} /> 
+      <Skillset title={title[1]}  />
+      <Resume title={title[2]}  />
+      <Contact title={title[3]} />
+      <Footer />
     </div>
   );
 }

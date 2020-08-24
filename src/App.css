@@ -1,38 +1,227 @@
+body {
+  background: url(./landscape.jpg) no-repeat center fixed;
+  background-size: cover;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 0 100px;
+  height: auto;
+  width: 100%;
+
+}
 .App {
   text-align: center;
+  display: grid;
+  position: relative;
+  text-decoration: none;
+  font-family: Helvetica;
+  padding-top: 1%;
+  
+  
+}
+.navbar {
+ font-size: calc(10px + 3vmin)
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  display: inline;
+  padding: 1%;
+  color: whitesmoke;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homeContainer{
+  position: relative;
+  background-color: rgba(231, 53, 112, 0.959);
+  min-height: 60vh;
+  opacity: .7;
   display: flex;
+  margin: 0 15% ;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  
+
+}
+
+.home {
+  position: absolute;
+  float: center;
+  background-color: rgba(255, 174, 0, 0.555);
+  height: 70%;
+  width: 70%;
+  
+  
+}
+.name {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  right: 25%;
   color: white;
+  font-size: calc(10px + 2vmin);
+  font-family: Roboto, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.github, 
+.linkedIn {
+  height: 50px;
+  width: 50px;
+  margin: 2px;
+}
+.itemsContainer {
+  background-color: whitesmoke;
+  position: relative;
+  height: 60vw;
+  width:70%;
+  opacity: .9;
+  display: grid;
+  margin: 5% 15%;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(6px + 2vmin);
+  color: rgb(42, 39, 46);
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  position: absolute;
+  bottom: 70%;
+  margin-left: 200px;
+  width: 60%;
+  height: 8%;
+  padding:3%;
+  background-color: rgba(231, 53, 112, 0.658);
+  
 }
+
+
+.skillset {
+  color: black;
+  font-size: calc(3px + 2vmin);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  left: 20%;
+  right: 20%;
+  position: absolute;
+  top: 47%;
+}
+.skillset img {
+  position: absolute;
+  height: auto;
+  width: 5vw;
+}
+.skill {
+  background-color: pink;
+  height: 8vh;
+  width: 5vw;
+  margin: 10px;
+  padding: 10%;
+  text-align: center;
+  display: inline-flex;
+  align-content: space-around;
+  
+}
+
+.footer {
+  width: 100%;
+  bottom: 0;
+  height: 100px;
+  margin: 0;
+  background-color: rgba(231, 53, 112, 0);
+  position: fixed;
+  color: rgba(0, 0, 0, 0.034);
+}
+.footer :hover{
+  width: 100%;
+  bottom: 0;
+  height: 100px;
+  margin: 0;
+  background-color: rgba(231, 53, 112, 0.623);
+  position: fixed;
+  color: black;
+
+
+}
+
+.slider {
+  background-color: whitesmoke;
+  position: relative;
+  height: 60vh;
+  width:70%;
+  opacity: .9;
+  margin: 5% 15%;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+.slider-items {
+  background-color:rgba(196, 78, 247, 0.589);
+  margin: 15% 30% 10% 30% ;
+  height: 60%;
+  
+
+}
+.label {
+  background-color: orange;
+  height: 100px;
+  padding: 20px;
+}
+
+.gitHubImage {
+  position: absolute;
+  height: 15%;
+  left: 32%;
+
+}
+.goLiveImage {
+  position: absolute;
+  height: 15%;
+  right: 32%;
+}
+
+
+.backArrow {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.forwardArrow{
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.slider-text {
+  color: whitesmoke;
+}
+.inactive {
+  display: none;
+}
+.active {
+  display: block;
+}
+
+.forwardArrow {
+  position: absolute;
+  border: solid black;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  padding: 3px;
+  left: 75%;
+  top: 50%;
+}
+
+.backArrow {
+  position: absolute;
+  right: 75%;
+  top: 50%;
+  border: solid black;
+  border-width: 0 5px 5px 0;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  padding: 3px;
+}
+
